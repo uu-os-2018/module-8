@@ -21,13 +21,13 @@ start() ->
 %% @doc Calculates a result. 
 
 result(X) ->
-    10*X.
+    2*X.
 
 %% @doc The recursive process receive loop function.
 loop() ->
     receive
         swap ->
-            io:format("Hot code swapping!"),
+            io:format("Hot code swapping!~n"),
             %% To change from old module version to new module version, a process must make a
             %% fully qualified function call.
             ?MODULE:loop();
